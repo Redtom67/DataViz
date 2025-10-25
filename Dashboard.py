@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 
+
 # Page configuration
 st.set_page_config(
     page_title="Road Safety in France",
@@ -16,12 +17,13 @@ def load_data():
 
 df = load_data()
 
+
 # Home page
 st.title("Road Safety")
 st.header("Factors and Victims of Accidents in France")
 
 st.markdown("""
-## Welcome to our interactive dashboard
+## Welcome to Thomas FISCHER's Road Safety Dashboard
 
 This application analyzes road accident data in France.
 

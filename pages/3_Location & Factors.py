@@ -11,7 +11,7 @@ def load_data():
 df = load_data()
 
 # Part 3: Where and Why?
-st.header("Part 3: Where and Why?")
+st.title("Part 3: Where and Why?")
 
 # Section 1: Location and Mapping
 st.subheader("1. Location and Mapping")
