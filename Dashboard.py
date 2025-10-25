@@ -53,10 +53,12 @@ st.markdown("""
 For more information, consult the official PDF describing the database:
 """)
 
-# Display PDF in iframe
-with open("./description-des-bases-de-donnees-annuelles.pdf", "rb") as pdf_file:
-    base64_pdf = base64.b64encode(pdf_file.read()).decode('utf-8')
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800" type="application/pdf"></iframe>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+# Download link for PDF
+pdf_path = "./description-des-bases-de-donnees-annuelles.pdf"
+with open(pdf_path, "rb") as pdf_file:
+    pdf_bytes = pdf_file.read()
+    b64_pdf = base64.b64encode(pdf_bytes).decode('utf-8')
+    href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="description-des-bases-de-donnees-annuelles.pdf">Download PDF Documentation</a>'
+    st.markdown(href, unsafe_allow_html=True)
 
 st.markdown("---")
